@@ -14,4 +14,5 @@
 ![인물관계도](https://github.com/jmp7911/chatAPI/assets/37658328/11d6056e-ea4d-49b3-a567-648043286bf7)
 
 <h3>1.3 드림즈 조직도</h3>
+
 ![조직도](https://github.com/jmp7911/chatAPI/assets/37658328/bcb3e970-f4e1-42d3-b3a2-801e3a952d3e)
