@@ -1,2 +1,4 @@
-import chatGPTAPI from './controller.js';
+import $wording, {chatGPTAPI} from './controller.js';
+
+
 

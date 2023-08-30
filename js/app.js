@@ -1,7 +1,7 @@
 const url = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`
 
 const $input = document.querySelector('input')
-const $button = document.querySelector('button')
+const $submit = document.querySelector('.submit')
 const $wording = document.querySelector('.wording')
 
 const data = []
@@ -10,22 +10,23 @@ data.push({
   "content": "assistant는 SBS 드라마 스토브리그의 대사를 작성한 작가입니다."
 }, {
   "role": "user",
-  "content": "에피소드 1의 명대사를 알려줘"
+  "content": "등장인물 백승수에 대해 알려줘"
 }, {
   "role": "assistant",
-  "content": [{wording: "코치진들의 파벌싸움, 양쪽 파벌이 모두 무시하는 힘없는 감독, 어느새 소속이 부끄러워진 꼴찌의 이미지, 낙후된 시설 속에 떨어지는 의욕",
-  description: "면접 중 드림즈의 문제점을 지적해달라는 질문에 대한 백승수의 답."}]
-})
+  "content": ``
+}
+)
 
 
-$button.addEventListener('click', e => {
+$submit.addEventListener('click', e => {
   console.log('click')
   e.preventDefault()
-  const contents = $input.value
-  // data.push({
-  //     "role": "user",
-  //     "content": contents
-  // })
+  
+  const contents = `"${$input.value}"에 대한 응답은 등장인물 백승수가 말하는 것 처럼 해줘. 결과는 문장을 제외하고 json으로 해줘`
+  data.push({
+      "role": "user",
+      "content": contents
+  })
   $input.value = ''
 
   chatGPTAPI()
@@ -47,6 +48,3 @@ function chatGPTAPI() {
       $wording.innerHTML = `${res.choices[0].message.content}`
   })
 }
-
-export default $wording;
-export {chatGPTAPI};
