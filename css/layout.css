@@ -46,7 +46,6 @@ body {
   min-height: 100vh;
 	line-height: 1;
   margin: auto;
-  width: 1200px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -74,9 +73,16 @@ a:visited {
 
 header {
   font-size: 18pt;
-  text-align: center;
   padding: 10px;
   margin: 10px;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+header > h1 {
+  
 }
 main {
   flex-grow: 1;
@@ -99,6 +105,11 @@ div {
 div::-webkit-scrollbar {
   display: none;
 
+}
+aside > ul{
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
 }
 section.search {
     margin-bottom: 10px;
@@ -147,6 +158,7 @@ section.container {
   border: 1px solid #eee;
   justify-content: center;
   align-items: center;
+  width: 1200px;
 }
 
 section.container >div {
