@@ -4,13 +4,29 @@
     단장 백승수의 명대사를 모아 제공합니다.
   </li>
 </ul>
-<h2>1. 프로젝트 아이디어 기획</h2>
+<h2>목차</h2>
+![기획 및 배포](#m1)
+<ol>
+  <li>[기획 및 배포](#m1)</li>
+  <li><a href="#m2">UI</a></li>
+  <li><a href="#m3">기능</a></li>
+  <li><a href="#m4">개발하면서 느낀점</a></li>
+</ol>
+<h2 id="m1">1. 기획 및 배포</h2>
+<h3>1-1. 기획</h3>
 <ul>
   <li>
     드라마의 장면이나 특정 대사를 검색해서 찾아주는 서비스 입니다.
   </li>
 </ul>
-<h2>2. UI</h2>
+<h3>1-2. 배포URL</h3>
+<ul>
+  <li>
+    <a href="https://jmp7911.github.io/chatAPI/">https://jmp7911.github.io/chatAPI/</a>
+  </li>
+</ul>
+
+<h2 id="m2">2. UI</h2>
 
 ![UI](https://github.com/jmp7911/chatAPI/assets/37658328/623399cc-bbc3-4d70-a7c5-a1c79c633bc1)
 <ol>
@@ -19,7 +35,7 @@
   </li>
 </ol>
 
-<h2>3. 기능</h2>
+<h2 id="m3">3. 기능</h2>
 <h3>3-1. GPT API 연동</h3>
 <ul>
   <li>
@@ -37,4 +53,5 @@
   </li>
 </ul>
 
-<h2></h2>
+<h3 id="m4">4. 개발하면서 느낀 점</h2>
+
