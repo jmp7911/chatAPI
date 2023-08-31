@@ -1,4 +1,4 @@
-<h1>SBS 드라마 스토브리그 명대사 서비스</h1>
+![스크린샷 2023-08-31 오후 2 47 09](https://github.com/jmp7911/chatAPI/assets/37658328/97ac39d7-2678-4780-bc80-b98fe9cb13fa)![스크린샷 2023-08-31 오후 2 47 09](https://github.com/jmp7911/chatAPI/assets/37658328/60d4cb32-c0fe-42d8-b649-06f012778932)<h1>SBS 드라마 스토브리그 명대사 서비스</h1>
 <ol>
   <li>
     단장 백승수의 명대사를 모아 제공합니다.
@@ -12,4 +12,21 @@
 </ol>
 <h2>2. UI</h2>
 
-![스크린샷 2023-08-31 오후 2 37 07](https://github.com/jmp7911/chatAPI/assets/37658328/623399cc-bbc3-4d70-a7c5-a1c79c633bc1)
+!(https://github.com/jmp7911/chatAPI/assets/37658328/623399cc-bbc3-4d70-a7c5-a1c79c633bc1)
+<ol>
+  <li>
+    레이아웃은 크게 3부분으로 검색,검색결과, 검색기록 영역이 있습니다.
+  </li>
+</ol>
+
+<h2>3. 기능</h2>
+<h3>3-1. GPT API 연동</h3>
+<ol>
+  <li>
+    chatGPT의 정보 중에 드라마의 명대사 정보가 있을 줄 알았는데 결과가 없었습니다.
+  </li>
+  <li>
+    명대사 텍스트를 미리 코드에서 한번 넣어두고 대사를 요청했습니다.
+  </li>
+</ol>
+!(https://github.com/jmp7911/chatAPI/assets/37658328/65eb75b8-bdb9-436b-b15b-fbadad757de4)
