@@ -29,4 +29,12 @@
     명대사 텍스트를 미리 코드에서 한번 넣어두고 대사를 요청했습니다.
   </li>
 </ul>
-![기능](https://github.com/jmp7911/chatAPI/assets/37658328/65eb75b8-bdb9-436b-b15b-fbadad757de4)
+![스크린샷 2023-08-31 오후 2 47 09](https://github.com/jmp7911/chatAPI/assets/37658328/3a1f3aa9-24ee-497b-ab76-1c4cd730a8fb)
+<h3>3-2. 검색기록</h3>
+<ul>
+  <li>
+    검색 텍스트와 응답 텍스트를 로컬스토리지에 기록하였습니다.
+  </li>
+</ul>
+
+<h2></h2>
