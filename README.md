@@ -12,7 +12,7 @@
 </ul>
 <h2>2. UI</h2>
 
-!(https://github.com/jmp7911/chatAPI/assets/37658328/623399cc-bbc3-4d70-a7c5-a1c79c633bc1)
+![UI](https://github.com/jmp7911/chatAPI/assets/37658328/623399cc-bbc3-4d70-a7c5-a1c79c633bc1)
 <ol>
   <li>
     레이아웃은 크게 3부분으로 검색,검색결과, 검색기록 영역이 있습니다.
@@ -29,4 +29,4 @@
     명대사 텍스트를 미리 코드에서 한번 넣어두고 대사를 요청했습니다.
   </li>
 </ul>
-!(https://github.com/jmp7911/chatAPI/assets/37658328/65eb75b8-bdb9-436b-b15b-fbadad757de4)
+![기능](https://github.com/jmp7911/chatAPI/assets/37658328/65eb75b8-bdb9-436b-b15b-fbadad757de4)
