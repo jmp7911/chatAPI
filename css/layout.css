@@ -106,11 +106,6 @@ div::-webkit-scrollbar {
   display: none;
 
 }
-aside > ul{
-  display: flex;
-  flex-flow: column wrap;
-  gap: 10px;
-}
 section.search {
     margin-bottom: 10px;
     display: flex;
@@ -162,22 +157,28 @@ section.container {
 }
 
 section.container >div {
-  min-height: inherit;
+  min-height: 300px;
+  max-height: 500px;
   padding: 20px;
   overflow-y: scroll;
+  height: 100%;
 }
 section.container >div:first-child {
-  flex-grow: 2;
-  flex-shrink: 1;
+  flex: 2 1 0;
 }
 
 section.container >div:last-child {
-  align-self: flex-start;
-  min-height: 500px;
   border: 1px solid #eee;
-  flex-shrink: 3;
+  flex: 1 1 0;
 }
 
+section.container div.history_label {
+  display: flex;
+  justify-content:space-between;
+  height: 30px;
+  line-height: 30px;
+  background-color: #eee;
+}
 section.container ul {
   
 }
@@ -186,6 +187,7 @@ section.container li {
   margin-bottom: 10px;
   cursor: pointer;
   padding: 10px;
+  flex: 1 1 0;
 }
 
 section.container li:hover {
@@ -193,13 +195,41 @@ section.container li:hover {
   border-bottom: 1px solid;
 }
 
+section.container li::marker {
+  content: url("/bookmark-check-fill.svg");
+  
+}
+
 p.wording {
   font-size: 16pt;
-  font-family: 'GangwonEdu_OTFBoldA';
+  line-height: initial;
+  font-family: 'GangwonEdu_OTFBoldA' ;
 }
 p.description::before {
   content: '-';
 }
 p.description {
+  line-height: initial;
   margin: 12px;
+}
+
+.modal {
+  display:    none;
+  position:   fixed;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: rgba( 255, 255, 255, .8 )
+  url('https://i.stack.imgur.com/FhHRx.gif')
+  50% 50%
+  no-repeat;
+}
+
+body.loading {
+    overflow: hidden;
+}
+body.loading .modal {
+    display: block;
 }

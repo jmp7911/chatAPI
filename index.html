@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/layout.css">
   <title>스토브리그 명대사</title>
 </head>
@@ -12,16 +13,15 @@
       스토브리그 명대사 
     </h1>
     <div>
-      <button type="button">대사</button>
-      <button type="button">인물</button>
-      <button type="button">에피소드</button>
     </div>
   </header>
   <main class="main">
+    <div class="modal"></div>
     <section class="search">
-      <div>대사</div>
+      <div>검색</div>
       <ul>
           <li>
+              <i class="bi bi-chat-quote-fill"></i>
               알고있는 대사가 있나요?
           </li>
           <li>
@@ -32,8 +32,18 @@
     </section>
     <section class="container">
       <div>
-        <p class="wording">코치진들의 파벌싸움, 양쪽 파벌이 모두 무시하는 힘없는 감독, 어느새 소속이 부끄러워진 꼴찌의 이미지, 낙후된 시설 속에 떨어지는 의욕.</p>
-        <p class="description">면접 중 드림즈의 문제점을 지적해달라는 질문에 대한 백승수의 답.</p>
+        <p class="wording"></p>
+        <p class="description"></p>
+      </div>
+      <div>
+        <div class="history_label">
+          
+          <span><i class="bi bi-clock-history"></i>History</span>
+          <a href="" onclick="removeHistory()"><i class="bi bi-trash3"></i></a>
+        </div>
+        <ul id="search_history">
+          
+        </ul>
       </div>
     </section>
     

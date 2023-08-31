@@ -4,8 +4,34 @@ const $input = document.querySelector('input')
 const $submit = document.querySelector('.submit')
 const $wording = document.querySelector('.wording')
 const $description = document.querySelector('.description')
+const $history = document.querySelector('li')
 
 const data = []
+
+
+if (!localStorage.getItem('search_history')) {
+  localStorage.setItem('search_history', JSON.stringify([]))
+} else {
+  const searchHistoryArr = JSON.parse(localStorage.getItem('search_history'));
+  const $search_history = document.getElementById('search_history')
+  searchHistoryArr.forEach(obj => {
+    const $history = document.createElement('li');
+    $history.innerHTML = obj.searchString;
+    $history.addEventListener('click', e=> {
+      e.preventDefault();
+    
+      $wording.innerHTML = obj.quote;
+      $description.innerHTML = obj.description === undefined ? '' : obj.description;
+
+    })
+    $search_history.appendChild($history)
+  })
+
+}
+
+
+
+
 data.push({
   "role": "system",
   "content": "assistant는 키워드만 보고 드라마 명장면 명대사를 찾아줍니다."
@@ -93,6 +119,8 @@ const text = `1. 그 악의적인 편집은 계속 늘어나겠죠,
 
 const prompt = `
 드라마 명대사: \`\`\`${text}\`\`\`
+
+"숫자."로 장면이 구분되어 있습니다
 `;
 
 data.push({
@@ -101,12 +129,12 @@ data.push({
 }
 )
 
-$submit.addEventListener('click', e => {
+$submit.addEventListener('click', async (e) => {
   console.log('click')
   e.preventDefault()
   
   const contents = `
-  키워드와 관련된 장면이 있으면 장면별로 찾아줘.
+  키워드와 관련된 장면이 있으면 장면 전체를 찾아줘.
   키워드는 이중 백틱(\`\`)으로 구분되어 있습니다.
 
   \`\`${$input.value}\`\`. 해당하는 결과가 없으면 '해당 장면을 찾을 수 없습니다'를 문자열로 응답 해줘. 결과가 있으면 씬 단위로 문장을 제외하고 장면번호,대사를 포함하고 scene,quote,description 키값을 사용하는 json객체 1개로 해줘`
@@ -115,36 +143,71 @@ $submit.addEventListener('click', e => {
       "role": "user",
       "content": contents
   })
+  
+  document.body.className = "loading";
+  response = await chatGPTAPI()
+  document.body.className = "";
+  response.searchString = $input.value;
+  insertSearchHistory(response);
   $input.value = ''
-
-  chatGPTAPI()
 })
 
-function chatGPTAPI() {
-  fetch(url, {
+async function chatGPTAPI() {
+  res = await (await fetch(url, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify(data),
       redirect: 'follow'
+  })).json();
+  
+  console.log(res)
+  // 답변 온 것을 assistant로 저장
+  try {
+    const jsonData = JSON.parse(res.choices[0].message.content);
+    $wording.innerHTML = `${jsonData.quote}`
+    $description.innerHTML = `${jsonData.description}`
+    
+    data.pop();
+
+    return jsonData;
+  } catch(e) {
+    $wording.innerHTML = `${res.choices[0].message.content}`
+    $description.innerHTML = ``
+    data.pop();
+
+    return {quote:res.choices[0].message.content};
+  }
+
+  
+
+}
+
+function insertSearchHistory(obj) {
+  const $search_history = document.getElementById('search_history');
+  const searchHistoryArr = JSON.parse(localStorage.getItem('search_history'));
+  searchHistoryArr.push(obj);
+  localStorage.setItem('search_history', JSON.stringify(searchHistoryArr));
+
+  const $history = document.createElement('li');
+  $history.innerHTML = obj.searchString;
+  $history.addEventListener('click', e=> {
+    e.preventDefault();
+  
+    $wording.innerHTML = obj.quote;
+    $description.innerHTML = obj.description === undefined ? '' : obj.description;;
+
   })
-  .then(res => res.json())
-  .then(res => {
-      console.log(res)
-      // 답변 온 것을 assistant로 저장
-      try {
-        const jsonData = JSON.parse(res.choices[0].message.content);
-        $wording.innerHTML = `${jsonData.quote}`
-        $description.innerHTML = `${jsonData.description}`
-        data.pop();
-      } catch(e) {
-        $wording.innerHTML = `${res.choices[0].message.content}`
-        $description.innerHTML = ``
-        data.pop();
-      }
-      
-      
-      
-  })
+  $search_history.appendChild($history)
+}
+
+function removeHistory() {
+  event.preventDefault();
+  localStorage.setItem('search_history', JSON.stringify([]))
+  const $search_history = document.getElementById('search_history');
+
+  $search_history.innerHTML = ''
+
+
 }
