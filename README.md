@@ -11,4 +11,5 @@
   </li>
 </ol>
 <h2>2. UI</h2>
-![스크린샷 2023-08-31 오후 2 37 07](https://github.com/jmp7911/chatAPI/assets/37658328/18181ee2-8555-4387-ba07-f6c88ce7e373)
+
+![스크린샷 2023-08-31 오후 2 37 07](https://github.com/jmp7911/chatAPI/assets/37658328/623399cc-bbc3-4d70-a7c5-a1c79c633bc1)
