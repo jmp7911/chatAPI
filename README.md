@@ -5,9 +5,8 @@
   </li>
 </ul>
 <h2>목차</h2>
-![기획 및 배포](#m1)
 <ol>
-  <li>[기획 및 배포](#m1)</li>
+  <li><a href="#m1">기획 및 배포</a></li>
   <li><a href="#m2">UI</a></li>
   <li><a href="#m3">기능</a></li>
   <li><a href="#m4">개발하면서 느낀점</a></li>
