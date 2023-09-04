@@ -55,7 +55,7 @@
   </li>
   
 ![search_history 키 값에 JSON객체 배열로 검색텍스트, 응답을 기록](https://github.com/jmp7911/chatAPI/assets/37658328/63901c5e-4f5e-4768-9749-79d124d3ce15)
-<span stlye="text-color:#bbb">* search_history 키 값에 JSON객체 배열로 검색텍스트, 응답을 기록<span>
+<span stlye="text-color:#bbb">[* search_history 키 값에 JSON객체 배열로 검색텍스트, 응답을 기록]<span>
 </ul>
 
 <h3 id="m4">4. 개발을 마치고 느낀 점</h2>
