@@ -34,9 +34,11 @@
   </li>
 </ol>
 
-![TRIAL____________1](https://github.com/jmp7911/chatAPI/assets/37658328/ee9eb2af-5c27-4be5-9121-279751bfd33c)
-![TRIAL____________2](https://github.com/jmp7911/chatAPI/assets/37658328/ba598d1c-44c5-4f57-b04f-9f848765c0c5)
-![TRIAL____________3](https://github.com/jmp7911/chatAPI/assets/37658328/de600671-08ef-461e-8aa0-4eaca89cd411)
+![ezgif-2-4e1f7b87c3](https://github.com/jmp7911/chatAPI/assets/37658328/5bdeea16-dc7e-4f18-82db-c4f165a839dc)
+
+![ezgif-2-5475e88868](https://github.com/jmp7911/chatAPI/assets/37658328/6731f854-bed3-4cd3-bfcf-571d8c4c372b)
+
+![ezgif-2-ee4539ea27](https://github.com/jmp7911/chatAPI/assets/37658328/303844b3-74e1-4264-9c7e-638f03ee38ff)
 
 
 
