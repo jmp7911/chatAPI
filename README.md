@@ -35,14 +35,11 @@
 </ol>
 
 ![ezgif-2-4e1f7b87c3](https://github.com/jmp7911/chatAPI/assets/37658328/5bdeea16-dc7e-4f18-82db-c4f165a839dc)
-
+[검색 1]
 ![ezgif-2-5475e88868](https://github.com/jmp7911/chatAPI/assets/37658328/6731f854-bed3-4cd3-bfcf-571d8c4c372b)
-
+[검색 2]
 ![ezgif-2-ee4539ea27](https://github.com/jmp7911/chatAPI/assets/37658328/303844b3-74e1-4264-9c7e-638f03ee38ff)
-
-
-
-![제목 없는 디자인](https://github.com/jmp7911/chatAPI/assets/37658328/cbe39844-a59d-4468-99b0-d552523c0733)
+[히스토리]
 
 <h2 id="m3">3. 기능</h2>
 <h3>3-1. 대사 검색(GPT API 연동)</h3>
