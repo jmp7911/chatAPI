@@ -35,6 +35,8 @@
 </ol>
 
 ![TRIAL____________1](https://github.com/jmp7911/chatAPI/assets/37658328/ee9eb2af-5c27-4be5-9121-279751bfd33c)
+![TRIAL____________2](https://github.com/jmp7911/chatAPI/assets/37658328/ba598d1c-44c5-4f57-b04f-9f848765c0c5)
+![TRIAL____________3](https://github.com/jmp7911/chatAPI/assets/37658328/de600671-08ef-461e-8aa0-4eaca89cd411)
 
 
 
