@@ -34,6 +34,10 @@
   </li>
 </ol>
 
+![TRIAL____________1](https://github.com/jmp7911/chatAPI/assets/37658328/ee9eb2af-5c27-4be5-9121-279751bfd33c)
+
+
+
 ![제목 없는 디자인](https://github.com/jmp7911/chatAPI/assets/37658328/cbe39844-a59d-4468-99b0-d552523c0733)
 
 <h2 id="m3">3. 기능</h2>
